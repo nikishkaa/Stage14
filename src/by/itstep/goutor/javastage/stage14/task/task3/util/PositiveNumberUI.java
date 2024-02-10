@@ -5,6 +5,6 @@ public class PositiveNumberUI {
 
         StringBuilder builder = new StringBuilder();
 
-        return builder.append(count).append(" - Positive digit in your vector");
+        return builder.append(count).append(" — Positive digit in your vector");
     }
 }

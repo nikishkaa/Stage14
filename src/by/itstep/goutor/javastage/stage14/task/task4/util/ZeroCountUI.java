@@ -4,6 +4,6 @@ public class ZeroCountUI {
     public static StringBuilder getZeroCountUI(int count) {
         StringBuilder builder = new StringBuilder();
 
-        return builder.append("Zero number in your array - ").append(count);
+        return builder.append("Zero number in your array — ").append(count);
     }
 }

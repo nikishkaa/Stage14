@@ -4,6 +4,6 @@ public class OddNumberUI {
     public static StringBuilder getOddNumberUI(int count) {
         StringBuilder builder = new StringBuilder();
 
-        return builder.append("Odd number in your vector - ").append(count);
+        return builder.append("Odd number in your vector — ").append(count);
     }
 }

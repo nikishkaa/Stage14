@@ -5,9 +5,9 @@ public class EvenNumberLogic {
 
         int evenCount = 0;
 
-        for (int i = 0; i < numbers.length; i++) {
+        for (int number : numbers) {
 
-            if (numbers[i] % 2 == 0) {
+            if (number % 2 == 0) {
                 evenCount++;
             }
 

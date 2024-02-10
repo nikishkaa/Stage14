@@ -1,4 +1,4 @@
-package by.itstep.goutor.javastage.stage14.util.testarray;
+package by.itstep.goutor.javastage.stage14.task.task7.util;
 
 import java.util.Random;
 

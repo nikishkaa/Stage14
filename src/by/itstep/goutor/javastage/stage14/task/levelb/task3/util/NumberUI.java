@@ -3,10 +3,15 @@ package by.itstep.goutor.javastage.stage14.task.levelb.task3.util;
 import java.util.Arrays;
 
 public class NumberUI {
-    public static StringBuilder getNumberUI(int[] numbers, int userNumber, int count) {
-        StringBuilder builder = new StringBuilder();
+    public static StringBuilder BUILDER;
 
-        return builder.append("Start array:\n")
+    static {
+        BUILDER = new StringBuilder();
+    }
+
+    public static StringBuilder getNumberUI(int[] numbers, int userNumber, int count) {
+
+        return BUILDER.append("Start array:\n")
                 .append(Arrays.toString(numbers))
                 .append("\nNumbers in array = ").append(userNumber)
                 .append("\nis — ").append(count);

@@ -1,54 +1,45 @@
 package by.itstep.goutor.javastage.stage14.task.leveld.task1.model.logic;
 
+
 public class NumLogic {
     public static int getCompositionNumber(int[] numbers) {
 
         int composition = 1;
 
-        int max = Integer.MAX_VALUE;
-        int min = Integer.MIN_VALUE;
+        int max = numbers[0];
+        int min = numbers[0];
 
         int minPosition = 0;
         int maxPosition = 0;
 
 
-//        for (int number : numbers) {
-//            if (number > min) {
-//                min = number;
-//            }
-//            if (number < max) {
-//                max = number;
-//            }
-//        }
-
-
         for (int i = 0; i < numbers.length; i++) {
 
-            if (numbers[i] > min) {
+            if (numbers[i] < min) {
                 min = numbers[i];
-                minPosition = i + 1;
+                minPosition = i;
             }
 
-            if (numbers[i] < max) {
+            if (numbers[i] > max) {
                 max = numbers[i];
-                maxPosition = i + 1;
+                maxPosition = i;
             }
         }
 
 
-        System.out.println("max " + min + "-max");
-        System.out.println("min " + max + "-min");
-        System.out.println("max Position " + minPosition + "-max");
-        System.out.println("min Position  " + maxPosition + "-min");
+        if (minPosition > maxPosition) {
+            int t = minPosition;
+            minPosition = maxPosition;
+            maxPosition = t;
+        }
 
 
         for (int i = 0; i < numbers.length; i++) {
-
-            if (numbers[i] > maxPosition && numbers[i] < minPosition) {
+            if (i > minPosition && i < maxPosition) {
                 composition *= numbers[i];
             }
-
         }
+
 
         return composition;
     }

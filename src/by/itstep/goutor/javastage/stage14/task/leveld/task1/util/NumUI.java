@@ -4,9 +4,10 @@ import java.util.Arrays;
 
 public class NumUI {
     public static StringBuilder BUILDER;
-static{
-BUILDER = new StringBuilder();
-}
+
+    static {
+        BUILDER = new StringBuilder();
+    }
 
     public static StringBuilder getNumUI(int[] numbers, int composition) {
 

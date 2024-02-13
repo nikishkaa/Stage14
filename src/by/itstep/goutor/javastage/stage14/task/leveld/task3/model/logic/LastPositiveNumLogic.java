@@ -1,4 +1,4 @@
-package by.itstep.goutor.javastage.stage14.task.leveld.task3.model;
+package by.itstep.goutor.javastage.stage14.task.leveld.task3.model.logic;
 
 
 public class LastPositiveNumLogic {

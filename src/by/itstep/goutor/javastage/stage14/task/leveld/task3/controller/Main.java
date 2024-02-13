@@ -1,6 +1,6 @@
 package by.itstep.goutor.javastage.stage14.task.leveld.task3.controller;
 
-import by.itstep.goutor.javastage.stage14.task.leveld.task3.model.LastPositiveNumLogic;
+import by.itstep.goutor.javastage.stage14.task.leveld.task3.model.logic.LastPositiveNumLogic;
 import by.itstep.goutor.javastage.stage14.task.leveld.task3.util.LastPositPositionUI;
 import by.itstep.goutor.javastage.stage14.task.leveld.task3.util.RndArray;
 import by.itstep.goutor.javastage.stage14.util.view.PrintStringBuilder;

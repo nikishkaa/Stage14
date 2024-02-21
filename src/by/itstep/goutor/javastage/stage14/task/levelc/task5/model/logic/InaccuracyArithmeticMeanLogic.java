@@ -3,6 +3,10 @@ package by.itstep.goutor.javastage.stage14.task.levelc.task5.model.logic;
 public class InaccuracyArithmeticMeanLogic {
     public static int getBiggestElementCount(int[] numbers, int userNumber) {
 
+        if (numbers == null || numbers.length == 0) {
+            return -1;
+        }
+
         int count = 0;
 
         int mean = getArithmeticMean(numbers);

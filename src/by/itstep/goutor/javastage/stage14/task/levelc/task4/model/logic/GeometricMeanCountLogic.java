@@ -3,6 +3,10 @@ package by.itstep.goutor.javastage.stage14.task.levelc.task4.model.logic;
 public class GeometricMeanCountLogic {
     public static int getGeometricMeanCount(int[] numbers) {
 
+        if (numbers == null || numbers.length == 0) {
+            return -1;
+        }
+
         int count = 0;
 
         double geometricMeans = getGeometricMean(numbers);

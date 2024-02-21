@@ -11,8 +11,22 @@ public class PositiveNumLogic {
 
         int sum = 0;
 
-        int firstPositivePosition = IMPOSSIBLE_ELEMENT;
-        int secondPositivePosition = IMPOSSIBLE_ELEMENT;
+        int[] positions = getPosition(numbers);
+
+
+        for (int i = positions[0] + 1; i < positions[1]; i++) {
+            sum += numbers[i];
+        }
+
+
+        return sum;
+    }
+
+
+    private static int[] getPosition(int[] numbers) {
+
+        int[] positions = new int[]{IMPOSSIBLE_ELEMENT, IMPOSSIBLE_ELEMENT};
+
         int positionCount = 0;
 
         for (int i = 0; i < numbers.length; i++) {
@@ -20,21 +34,15 @@ public class PositiveNumLogic {
             if (numbers[i] > 0) {
                 positionCount++;
                 if (positionCount == 1) {
-                    firstPositivePosition = i;
+                    positions[0] = i;
                 } else {
 
-                    secondPositivePosition = i;
+                    positions[1] = i;
                     break;
                 }
             }
         }
 
-
-        for (int i = firstPositivePosition + 1; i < secondPositivePosition; i++) {
-            sum += numbers[i];
-        }
-
-
-        return sum;
+        return positions;
     }
 }

@@ -1,6 +1,8 @@
 package by.itstep.goutor.javastage.stage14.task.leveld.task5.model.logic;
 
 public class PositiveNumLogic {
+    public static final int IMPOSSIBLE_ELEMENT = -1;
+
     public static int getSumBetweenPositiveElement(int[] numbers) {
 
         if (numbers == null || numbers.length == 0) {
@@ -9,8 +11,8 @@ public class PositiveNumLogic {
 
         int sum = 0;
 
-        int firstPositivePosition = -1;
-        int secondPositivePosition = -1;
+        int firstPositivePosition = IMPOSSIBLE_ELEMENT;
+        int secondPositivePosition = IMPOSSIBLE_ELEMENT;
         int positionCount = 0;
 
         for (int i = 0; i < numbers.length; i++) {

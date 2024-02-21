@@ -3,6 +3,10 @@ package by.itstep.goutor.javastage.stage14.task.leveld.task5.model.logic;
 public class PositiveNumLogic {
     public static int getSumBetweenPositiveElement(int[] numbers) {
 
+        if (numbers == null || numbers.length == 0) {
+            return -1;
+        }
+
         int sum = 0;
 
         int firstPositivePosition = -1;

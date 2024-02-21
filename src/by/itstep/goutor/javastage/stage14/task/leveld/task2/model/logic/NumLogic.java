@@ -1,6 +1,8 @@
 package by.itstep.goutor.javastage.stage14.task.leveld.task2.model.logic;
 
 public class NumLogic {
+    public static final int IMPOSSIBLE_ELEMENT = -1;
+
     public static int getSum(int[] numbers) {
 
         int positionOne = getFirstPosition(numbers);
@@ -22,7 +24,7 @@ public class NumLogic {
 
     private static int getFirstPosition(int[] numbers) {
 
-        int positionOne = -1;
+        int positionOne = IMPOSSIBLE_ELEMENT;
 
         for (int i = 0; i < numbers.length; i++) {
 
@@ -40,7 +42,7 @@ public class NumLogic {
 
     private static int getSecondPosition(int[] numbers, int positionOne) {
 
-        int positionTwo = -1;
+        int positionTwo = IMPOSSIBLE_ELEMENT;
 
         for (int i = numbers.length - 1; i > 0; i--) {
 

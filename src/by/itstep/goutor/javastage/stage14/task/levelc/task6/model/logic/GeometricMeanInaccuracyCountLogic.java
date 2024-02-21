@@ -3,6 +3,11 @@ package by.itstep.goutor.javastage.stage14.task.levelc.task6.model.logic;
 public class GeometricMeanInaccuracyCountLogic {
     public static int getGeometricMeanCount(int[] numbers, int userDigit) {
 
+        if (numbers == null || numbers.length == 0) {
+            return -1;
+        }
+
+
         int count = 0;
 
         double geometricMeans = getGeometricMean(numbers);

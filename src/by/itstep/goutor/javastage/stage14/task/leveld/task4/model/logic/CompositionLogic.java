@@ -6,6 +6,10 @@ public class CompositionLogic {
 
     public static int getCompositionBetweenZeroElement(int[] numbers) {
 
+        if (numbers == null || numbers.length == 0) {
+            return -1;
+        }
+
         int composition = 1;
 
         int[] positions = getFirstAndSecondPosition(numbers);

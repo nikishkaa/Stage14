@@ -6,25 +6,9 @@ public class NumLogic {
 
         int composition = 1;
 
-        int max = numbers[0];
-        int min = numbers[0];
 
-        int minPosition = 0;
-        int maxPosition = 0;
-
-
-        for (int i = 0; i < numbers.length; i++) {
-
-            if (numbers[i] < min) {
-                min = numbers[i];
-                minPosition = i;
-            }
-
-            if (numbers[i] > max) {
-                max = numbers[i];
-                maxPosition = i;
-            }
-        }
+        int minPosition = initMinPosition(numbers);
+        int maxPosition = initMaxPosition(numbers);
 
 
         if (minPosition > maxPosition) {
@@ -32,7 +16,6 @@ public class NumLogic {
             minPosition = maxPosition;
             maxPosition = t;
         }
-
 
         for (int i = 0; i < numbers.length; i++) {
             if (i > minPosition && i < maxPosition) {
@@ -43,4 +26,42 @@ public class NumLogic {
 
         return composition;
     }
+
+    private static int initMinPosition(int[] numbers) {
+
+        int min = numbers[0];
+
+        int minPosition = 0;
+
+
+        for (int i = 0; i < numbers.length; i++) {
+
+            if (numbers[i] < min) {
+                min = numbers[i];
+                minPosition = i;
+            }
+        }
+
+        return minPosition;
+    }
+
+
+    private static int initMaxPosition(int[] numbers) {
+
+        int max = numbers[0];
+
+        int maxPosition = 0;
+
+
+        for (int i = 0; i < numbers.length; i++) {
+
+            if (numbers[i] > max) {
+                max = numbers[i];
+                maxPosition = i;
+            }
+        }
+
+        return maxPosition;
+    }
+
 }

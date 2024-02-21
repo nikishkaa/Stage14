@@ -5,6 +5,10 @@ public class NumLogic {
 
     public static int getSum(int[] numbers) {
 
+        if (numbers == null || numbers.length == 0) {
+            return -1;
+        }
+
         int positionOne = getFirstPosition(numbers);
         int positionTwo = getSecondPosition(numbers, positionOne);
 

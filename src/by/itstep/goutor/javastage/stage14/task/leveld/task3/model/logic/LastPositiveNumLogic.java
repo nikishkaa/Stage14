@@ -6,6 +6,10 @@ public class LastPositiveNumLogic {
 
     public static int getSumBeforeLastPositNum(int[] numbers) {
 
+        if (numbers == null || numbers.length == 0) {
+            return -1;
+        }
+
         int sum = 0;
 
         int lastPositPosition = initLastPosElement(numbers);
